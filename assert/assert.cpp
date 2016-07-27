@@ -7,5 +7,4 @@ extern "C" void __assert(const char *msg, const char *file, int line, int res) {
         MTGosHAL::err << "Kernel panic.\n";
         for(;;);
     }
-    assert(0);
 }
