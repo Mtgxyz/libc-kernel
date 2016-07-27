@@ -7,3 +7,4 @@
 #define CLOSE 64|SYMBOL
 #define SPACE 128
 #define HEXNUM 256|UPPER
+extern ascii_table[256];
