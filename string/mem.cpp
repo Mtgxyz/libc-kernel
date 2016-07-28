@@ -3,8 +3,8 @@
 #include <textDISP.hpp>
 extern "C" void __optimized_memcpy_impl(void *dest, const void* src, size_t n);
 extern "C" void *memcpy(void *dest, const void *src, size_t n) {
-    unsigned long p1=(unsigned long)d;
-    unsigned long p2=(unsigned long)s;
+    unsigned long p1=(unsigned long)dest;
+    unsigned long p2=(unsigned long)src;
     //If two memory areas overlap, do something nonsensical
     if(((p1 > p2)&&(p1 < p2+n))||((p1+n > p2)&&(p1+n < p2+n)) {
         memset(dest, 0, n);
