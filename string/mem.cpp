@@ -6,7 +6,7 @@ extern "C" void *memcpy(void *dest, const void *src, size_t n) {
     unsigned long p1=(unsigned long)dest;
     unsigned long p2=(unsigned long)src;
     //If two memory areas overlap, do something nonsensical
-    if(((p1 > p2)&&(p1 < p2+n))||((p1+n > p2)&&(p1+n < p2+n)) {
+    if(((p1 > p2)&&(p1 < p2+n))||((p1+n > p2)&&(p1+n < p2+n))) {
         memset(dest, 0, n);
         err << "Don't use overlapping memory regions with memcpy. Use memmove instead! (Doing sth. nonsensical now.)\n";
         return dest;
